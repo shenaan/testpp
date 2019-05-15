@@ -1,0 +1,136 @@
+.header {
+  padding: 19px 0;
+  background-color: rgba(38, 43, 52, 0.85);
+  max-width: 100%;
+  overflow: hidden;
+
+  &.is-open {
+    overflow-y: visible;
+    padding: 19px 0 40px;
+    .header__logo {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      z-index: 101;
+    }
+  }
+
+  .main-container {
+    position: relative;
+  }
+
+  @include respond-min(1025) {
+    background-color: transparent;
+    padding: 36px 0;
+
+    .main-container {
+      @include display-flex();
+      @include ai-flex-center();
+    }
+  }
+}
+
+.header__separator {
+  display: none;
+
+  @include respond-min(1025) {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -34px;
+    @include center();
+    width: calc(100% - 40px);
+    height: 1px;
+    background-color: #fff;
+  }
+}
+
+.header__logo {
+  display: block;
+  @include size(156px, 23px);
+  img {
+    width: 100%;
+  }
+
+  @include respond-min(1025) {
+    @include size(170px, 26px);
+  }
+}
+
+/*hamburger*/
+.hamburger {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: -7px;
+  z-index: 10;
+  @include transition-03();
+
+  @include respond-min(1025) {
+    display: none;
+  }
+
+  &.is-active {
+    z-index: 101;
+
+    .line {
+      -webkit-transition-delay: 0.2s;
+      -o-transition-delay: 0.2s;
+      transition-delay: 0.2s;
+      background-color: #fff;
+      &:nth-child(1) {
+        -webkit-transform: translateY(10px) rotate(45deg);
+        -ms-transform: translateY(10px) rotate(45deg);
+        -o-transform: translateY(10px) rotate(45deg);
+        transform: translateY(10px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        -webkit-transform: translateY(-9px) rotate(-45deg);
+        -ms-transform: translateY(-9px) rotate(-45deg);
+        -o-transform: translateY(-9px) rotate(-45deg);
+        transform: translateY(-9px) rotate(-45deg);
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    .line {
+      color: #fff;
+      &:before {
+        width: 0%;
+      }
+    }
+  }
+
+  .line {
+    width: 30px;
+    height: 3px;
+    background-color: #a4b6c8;
+    display: block;
+    margin: 7px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      @include center();
+      background-color: $orangeColor;
+      width: 80%;
+      height: 100%;
+      @include transition-03();
+    }
+  }
+}
+

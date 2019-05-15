@@ -1,0 +1,6 @@
+.section{
+  padding: 45px 0 0;
+  @include respond-min(1025){
+    padding: 65px 0 0;
+  }
+}

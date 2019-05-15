@@ -1,0 +1,28 @@
+.categories__label{
+  display: block;
+  background-color: $orangeColor;
+  text-transform: uppercase;
+  color: $textDarkColor;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.09px;
+  text-align: center;
+  padding: 4px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 112px;
+  @include center();
+  margin-bottom: 15px;
+  @include transition-03();
+
+  &:hover, &:focus, &:active{
+    color: #fff;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .categories__label{
+    max-width: 200px;
+  }
+}

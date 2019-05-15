@@ -1,0 +1,24 @@
+$Grotesque: 'Basis Grotesque Pro', sans-serif;
+
+$baseFontFamily: $Grotesque;
+
+@mixin font-size($size:18) {
+  font-size: $size * 1px;
+  font-size: ($size / $baseFontSize) * 1rem;
+}
+
+$baseFontSize: 18;
+$baseFontSizePixel: $baseFontSize * 1px;
+
+$baseLineHeight: 1.6;
+$baseLetterSpacing: -0.2px;
+$textColor: #fff;
+$bodyBackground: #fff;
+
+$textDarkColor: #262b34;
+$orangeColor: #ffb600;
+$greyColor: #a4b6c8;
+
+$fontsUrl: "../fonts/";
+$imgUrl: "../img/";
+

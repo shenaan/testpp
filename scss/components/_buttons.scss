@@ -1,0 +1,61 @@
+/*-------------Button-----------------*/
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  @include ai-flex-center();
+  @include jc-flex-center();
+  line-height: 1;
+  font-weight: 700;
+  white-space: nowrap;
+  border-radius: 0 !important;
+  @include transition-03();
+  position: relative;
+  outline: none !important;
+
+  &.button--orange {
+    background-color: $orangeColor;
+    border: 1px solid $orangeColor;
+    color: $textDarkColor;
+  }
+
+  &.button--dark{
+    border: 1px solid $textDarkColor;
+    background-color: $textDarkColor;
+    color: #fff;
+  }
+
+  &.button--sm{
+    font-size: 14px;
+    padding: 7px 20px;
+  }
+  &.button--lg{
+    font-size: 22px;
+    padding: 10px 27px;
+  }
+  &.button--xl{
+    font-size: 22px;
+    padding: 10px 0px;
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+
+    &.button--orange{
+      color: #fff;
+    }
+    &.button--dark{
+      border: 1px solid #51555d;
+      background-color: #51555d;
+    }
+  }
+
+  @include respond-min(570){
+    &.button--xl{
+      padding: 10px 27px;
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+body,
+html {
+  height: auto;
+  &.no-scroll {
+    overflow-y: hidden;
+    height: 100%;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.is-mobile{
+  display: block;
+
+  @include respond-min(1025){
+    display: none;
+  }
+}
+
+

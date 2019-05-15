@@ -1,0 +1,40 @@
+@import "../abstracts/custom-variables";
+
+  @font-face {
+    font-family: 'Basis Grotesque Pro';
+    src: url('#{$fontsUrl}BasisGrotesquePro-Regular.eot');
+    src: url('#{$fontsUrl}BasisGrotesquePro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('#{$fontsUrl}BasisGrotesquePro-Regular.woff2') format('woff2'),
+    url('#{$fontsUrl}BasisGrotesquePro-Regular.woff') format('woff'),
+    url('#{$fontsUrl}BasisGrotesquePro-Regular.ttf') format('truetype'),
+    url('#{$fontsUrl}BasisGrotesquePro-Regular.svg#BasisGrotesquePro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Basis Grotesque Pro';
+    src: url('#{$fontsUrl}BasisGrotesquePro-Bold.eot');
+    src: url('#{$fontsUrl}BasisGrotesquePro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('#{$fontsUrl}BasisGrotesquePro-Bold.woff2') format('woff2'),
+    url('#{$fontsUrl}BasisGrotesquePro-Bold.woff') format('woff'),
+    url('#{$fontsUrl}BasisGrotesquePro-Bold.ttf') format('truetype'),
+    url('#{$fontsUrl}BasisGrotesquePro-Bold.svg#BasisGrotesquePro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Basis Grotesque Pro';
+    src: url('#{$fontsUrl}BasisGrotesquePro-Light.eot');
+    src: url('#{$fontsUrl}BasisGrotesquePro-Light.eot?#iefix') format('embedded-opentype'),
+    url('#{$fontsUrl}BasisGrotesquePro-Light.woff2') format('woff2'),
+    url('#{$fontsUrl}BasisGrotesquePro-Light.woff') format('woff'),
+    url('#{$fontsUrl}BasisGrotesquePro-Light.ttf') format('truetype'),
+    url('#{$fontsUrl}BasisGrotesquePro-Light.svg#BasisGrotesquePro-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+
+

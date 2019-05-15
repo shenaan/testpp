@@ -1,0 +1,118 @@
+/*------------Slick Slider----------------*/
+
+.slick__slider {
+  position: relative;
+}
+
+.slick-slide {
+  outline: none !important;
+}
+
+.slick-arrow {
+  position: absolute;
+  background: $textDarkColor;
+  font-size: 0;
+  border: none;
+  display: block;
+  @include square(33px);
+  z-index: 10;
+  bottom: 0;
+  margin: auto;
+  outline: none !important;
+  @include transition-03();
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    @include size(19px, 15px);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include transition-03();
+  }
+  &.slick-next {
+    right: 0;
+    &:after {
+      background-image: url("#{$imgUrl}carousel/arrow-next.svg");
+    }
+  }
+  &.slick-prev {
+    right: 36px;
+    &:after {
+      background-image: url("#{$imgUrl}carousel/arrow-prev.svg");
+    }
+  }
+
+  &:focus, &:hover, &:active {
+    background-color: $orangeColor;
+    &.slick-next {
+      &:after {
+        background-image: url("#{$imgUrl}carousel/arrow-next-active.svg");
+      }
+    }
+    &.slick-prev {
+      &:after {
+        background-image: url("#{$imgUrl}carousel/arrow-prev-active.svg");
+      }
+    }
+  }
+
+  @include respond-min(1025) {
+    @include square(72px);
+    right: auto;
+    left: calc(50% + 40px);
+    &.slick-next {
+      right: auto;
+      left: calc(50% + 115px);
+    }
+    &.slick-prev {
+      right: auto;
+    }
+    &:after {
+      @include size(18px, 30px);
+    }
+  }
+  @include respond-min(1200) {
+    left: calc(50% + 76px);
+    &.slick-next {
+      right: auto;
+      left: calc(50% + 152px);
+    }
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  max-width: 200px;
+  @include translateX(-50%);
+  li {
+    display: inline-block;
+    margin: 0 5px;
+    button {
+      font-size: 0;
+      cursor: pointer;
+      background-color: #ced7e0;
+      border: none;
+      border-radius: 50%;
+      @include square(10px);
+      padding: 0;
+      @include transition-03();
+    }
+    &.slick-active {
+      button {
+        background-color: #ffb600;
+      }
+    }
+  }
+}

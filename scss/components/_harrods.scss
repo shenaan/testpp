@@ -1,0 +1,121 @@
+.harrods-section {
+  color: $textDarkColor;
+}
+
+.harrods-section__heading {
+  text-align: center;
+  max-width: 240px;
+  @include center();
+
+  @include respond-min(1025) {
+    max-width: none;
+  }
+}
+
+.harrods-slider__item-inner {
+  width: 100%;
+  @include display-flex();
+  @include flex-wrap();
+
+  @include respond-min(570) {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+}
+
+.harrods-slider__item-col {
+  width: 100%;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 50%;
+  flex: 1 0 50%;
+
+  @include respond-min(570) {
+    width: 50%;
+    max-width: 50%;
+  }
+}
+
+.harrods-slider__item-img {
+  height: 222px;
+
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  &:before {
+    padding-top: calc(100% * 380 / 400); // formula: calc((100% * height) / width)
+  }
+
+  @include respond-min(570) {
+    height: auto;
+  }
+  @include respond-min(1025) {
+    &:before {
+      padding-top: calc((100% * 730) / 480);
+    }
+  }
+  @include respond-min(1200) {
+    &:before {
+      padding-top: calc((100% * 696) / 660);
+    }
+  }
+}
+
+.harrods-slider__content {
+  background-color: #ced7e0;
+  padding: 32px 24px 40px;
+
+  @include respond-min(570) {
+    padding: 40px 24px 60px;
+  }
+
+  @include respond-min(1025) {
+    padding: 107px 20px 152px 40px;
+  }
+  @include respond-min(1200) {
+    padding: 107px 20px 152px 76px;
+  }
+}
+
+.harrods-slider__logo {
+  width: 135px;
+  margin-bottom: 24px;
+  img {
+    width: 100%;
+  }
+
+  @include respond-min(1025) {
+    width: 145px;
+    margin-bottom: 76px;
+  }
+}
+
+.harrods-slider__item-title {
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: -0.3px;
+  line-height: 35px;
+  margin-bottom: 31px;
+  max-width: 215px;
+
+  @include respond-min(1025) {
+    font-size: 32px;
+    letter-spacing: -0.2px;
+    line-height: 42px;
+    margin-bottom: 18px;
+    max-width: 400px;
+  }
+}
+
+.harrods-slider__text {
+  display: none;
+  max-width: 300px;
+  margin-bottom: 73px;
+
+  @include respond-min(1025) {
+    display: block;
+    max-width: 377px;
+  }
+}
